@@ -34,8 +34,13 @@ while True:
     screen.fill(WHITE)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
+            if score >= 1:
+                print('Счёт:',score, ',', 'Точность:',f"{accuracy:.2f}",'%')
+                pygame.quit()
+                sys.exit()
+            else:
+                pygame.quit()
+                sys.exit()
             
         #Проверка нажатия на круг
         if event.type == pygame.MOUSEBUTTONDOWN:
