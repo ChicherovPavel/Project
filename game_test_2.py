@@ -42,8 +42,7 @@ while True:
             total_attempts += 1
             mouse_x, mouse_y = event.pos
             for circle in circles:
-                if (circle['x'] - radius < mouse_x < circle['x'] + radius) and \
-                    (circle['y'] - radius < mouse_y < circle['y'] + radius):
+                if (mouse_x - circle['x'])**2 + (mouse_y - circle['y'])**2 <= (radius)**2:
                     circles.remove(circle)
                     score += 1  
                     hit_sound.play()
