@@ -27,6 +27,7 @@ circles = []
 clock = pygame.time.Clock()
 last_circle_time = 0 
 score = 0
+accuracy = 0
 total_attempts = 0
 font = pygame.font.Font(None, 25)
 
