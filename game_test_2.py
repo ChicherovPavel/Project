@@ -54,12 +54,11 @@ while True:
                     hit_sound.play()
             break
             
-    #Рисование кругов       
+    #Обновляем время и рисуем круги      
     current_time = pygame.time.get_ticks()
     if current_time - last_circle_time > second_number: 
         last_circle_time = current_time 
 
-        #Проверка на проигрышь
         if len(circles) < 5:  
             x = random.randint(radius, width - radius)
             y = random.randint(radius, height - radius)
